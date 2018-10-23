@@ -23,9 +23,9 @@ DROP TABLE IF EXISTS `properties`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `properties` (
-  `propertyCode` int(11) NOT NULL,
-  `shortName` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `longName` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `propertyNumber` int(11) NOT NULL,
+  `buildingCode` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `propertyName` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`propertyCode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `rooms`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rooms` (
   `roomNumber` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `propertyCode` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `propertyNumber` int(11) NOT NULL,
   `dateRecorded` date DEFAULT NULL,
   `2Dphoto` tinyint(1) DEFAULT NULL,
   `3Dphoto` tinyint(1) DEFAULT NULL,
